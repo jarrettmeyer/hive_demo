@@ -4,7 +4,7 @@ import sys
 
 # Ensure that a max lines argument was given.
 if len(sys.argv) < 2:
-    print "Usage python ./create_weather_ext.py <year>"
+    print "Usage python ./create_weather.py <year>"
     exit(-1)
 
 # Get year and month values from input arguments.
@@ -19,7 +19,7 @@ ts = datetime.datetime(year, 1, 1, 0, 0, 0)
 
 while ts.year == year:
     month = ts.month
-    path_to_file = "../demo_files/weather_ext_%d_%d.txt" % (year, month)
+    path_to_file = "../demo_files/weather_%d_%d.txt" % (year, month)
     print "Creating sample file for %d-%d" % (month, year)
     file_ptr = open(path_to_file, "w")
     while ts.month == month:
