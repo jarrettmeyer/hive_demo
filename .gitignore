@@ -1,0 +1,3 @@
+.vagrant/
+demo_files/t1.txt
+demo_files/weather_ext_*.txt
