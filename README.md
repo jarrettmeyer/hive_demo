@@ -1,7 +1,7 @@
 # Hive Demo
 
 
-### 1. Starting the VM and Installing Ambari.
+## 1. Starting the VM and Installing Ambari.
 
 These instructions allow for the use of Apache Ambari. They follow the guide located on [docs.hortonworks.com](https://docs.hortonworks.com/HDPDocuments/Ambari/Ambari-2.6.0.0/index.html)
 
@@ -12,7 +12,7 @@ C:\work> vagrant up
 ```
 
 
-### 2. Configuring Ambari
+## 2. Configuring Ambari
 
 Once Ambari has been successfully installed, it is time to configure.
 
@@ -27,7 +27,7 @@ Follow the instructions on screen.
 * When asked to `Enter advanced database configuration [y/n]`, enter `n`. This will use the integrated Postgres database.
 
 
-### 3. Running Ambari
+## 3. Running Ambari
 
 You are now ready to run Ambari for the first time.
 
@@ -40,7 +40,7 @@ Navigate to [localhost:8080](http://localhost:8080). The default username and pa
 Create a new cluster named `demo`.
 
 
-### 4. Choose Services
+## 4. Choose Services
 
 Enable the following services.
 
@@ -56,4 +56,20 @@ All services will run on your VM.
 
 You will need to set passwords for your databases. I recommend that you make them as simple as possible (e.g. `hive`/`hive` for your Hive database).
 
-Once all issues have been addressed, you are ready to install your cluster. Go grab a coffee and eat a sandwich. This will take a while.
+Once all issues have been addressed, you are ready to install your cluster. Go grab a coffee. Eat a sandwich. Send a handwritten letter to your mother. She misses you. This will take a while.
+
+## 5. Settings
+
+The following settings need to be updated. You can set these easily using the Ambari Admin UI. Once you change these settings, you will need to restart services.
+
+### HDFS
+
+```
+dfs.replication = 1
+```
+
+#### Hive
+
+```
+hive.server2.enable.doAs = false
+```
