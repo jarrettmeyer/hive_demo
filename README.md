@@ -76,7 +76,7 @@ hive.server2.enable.doAs = false
 
 ### Local Settings
 
-You will find many things are easier if you make the `vagrant` user a member of the `hdfs` group.
+You will find many things are easier if you make the `vagrant` user a member of the `hdfs` group. (`hdfs` is the local administrator group for HDFS. This can be set in Hive under `dfs.cluster.administrators`.)
 
 ```
 $ sudo usermod -a -G hdfs vagrant
