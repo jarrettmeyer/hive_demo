@@ -36,7 +36,9 @@ $ sudo ambari-server start
 
 Navigate to [localhost:8080](http://localhost:8080). The default username and password is `admin`/`admin`.
 
-Create a new cluster named `demo`.
+Create a new cluster named `demo`. The machine name is `vagrant.vm`.
+
+*Hint: create an entry in your local hosts file to point vagrant.vm to 127.0.0.1.*
 
 
 ## 4. Choose Services
